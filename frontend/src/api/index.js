@@ -3,7 +3,7 @@ import axios from "axios";
 const BASE_URL = import.meta.env.VITE_BASE_URL;
 // const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
-const SERVER = `http://localhost:3000`;
+const SERVER = `https://memory-web-app.onrender.com/`;
 
 export const API = axios.create({
   baseURL: SERVER || BASE_URL,
