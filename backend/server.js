@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://memory-web-app.vercel.app/"],
+    origin: ["http://localhost:5173", "https://memory-web-app.vercel.app"],
   })
 );
 
@@ -26,7 +26,9 @@ const PORT = process.env.PORT || 3000;
 const start = async () => {
   try {
     await connectDb(process.env.DATABASE);
-    app.listen(PORT, console.log(`Server is listening on port ${PORT}...`));
+    app.listen(PORT, () =>
+      console.log(`Server is listening on port ${PORT}...`)
+    );
   } catch (error) {
     console.log(error);
   }
